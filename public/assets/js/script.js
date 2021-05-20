@@ -1,5 +1,6 @@
 const $animalForm = document.querySelector('#animal-form');
 const $zookeeperForm = document.querySelector("#zookeeper-form");
+
 const handleAnimalFormSubmit = event => {
   event.preventDefault();
 
@@ -51,7 +52,7 @@ const handleZookeeperFormSubmit = event => {
 
     const name = $zookeeperForm.querySelector('[name="zookeeper-name"]').value;
     const age = parseInt($zookeeperForm.querySelector('[name="age"]').value);
-    const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal]').value;
+    const favoriteAnimal = $zookeeperForm.querySelector('[name="favorite-animal"]').value;
 
     const zookeeperObj = { name, age, favoriteAnimal };
     console.log(zookeeperObj);
@@ -75,6 +76,6 @@ const handleZookeeperFormSubmit = event => {
     });
 };
 
-$zookeeperForm.addEventListener('submit', handleAnimalFormSubmit);
+$zookeeperForm.addEventListener('submit', handleZookeeperFormSubmit);
 
 $animalForm.addEventListener('submit', handleAnimalFormSubmit);
